@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<meta
+			name="description"
+			content="Aproximación al campo laboral — Proyecto Parcial (Práctica Profesional I, IFTS N.º 18)"
+		/>
+		<meta name="author" content="Nahuel Farías" />
+
+		<title>Aproximación al campo laboral — Proyecto Parcial</title>
+
+		<link rel="stylesheet" href="reveal.js/dist/reset.css" />
+		<link rel="stylesheet" href="reveal.js/dist/reveal.css" />
+		<link rel="stylesheet" href="reveal.js/dist/theme/white.css" id="theme" />
+
+		<link rel="stylesheet" href="reveal.js/dist/plugin/highlight/monokai.css" />
+
+		<!-- Custom styles are loaded last so they can override the base theme. -->
+		<link rel="stylesheet" href="styles/custom.css" />
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown="slides/deck.md"></section>
+			</div>
+		</div>
+
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/dist/plugin/markdown.js"></script>
+		<script src="reveal.js/dist/plugin/highlight.js"></script>
+		<script src="reveal.js/dist/plugin/notes.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+				controls: true,
+				progress: true,
+				center: true,
+				transition: "slide",
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			});
+		</script>
+	</body>
+</html>

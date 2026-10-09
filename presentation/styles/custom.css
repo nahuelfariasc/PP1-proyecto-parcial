@@ -1,0 +1,147 @@
+/*
+ * Custom presentation styles.
+ *
+ * Loaded after the Reveal.js base theme, so these rules override it.
+ * Keep custom presentation code separate from the Reveal.js framework.
+ */
+
+:root {
+	--deck-accent: #2563eb;
+	--deck-accent-soft: rgba(37, 99, 235, 0.12);
+	--deck-ink: #0f172a;
+	--deck-ink-soft: #475569;
+	--deck-canvas-dark: #0f172a;
+	--deck-canvas-dark-soft: #94a3b8;
+	--deck-font-sans:
+		"Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+	--deck-font-mono:
+		"JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ---- Base theme tokens (modern editorial / developer) ---- */
+
+.reveal {
+	--r-main-font: var(--deck-font-sans);
+	--r-heading-font: var(--deck-font-sans);
+	--r-code-font: var(--deck-font-mono);
+	--r-main-color: var(--deck-ink-soft);
+	--r-heading-color: var(--deck-ink);
+	--r-link-color: var(--deck-accent);
+	--r-link-color-hover: #1d4ed8;
+	--r-heading-text-transform: none;
+	--r-heading-font-weight: 700;
+	--r-heading-letter-spacing: -0.02em;
+	--r-heading-line-height: 1.1;
+	--r-main-font-size: 32px;
+	--r-block-margin: 0.7em;
+}
+
+.reveal h1 {
+	font-size: 2.5em;
+}
+
+.reveal h2 {
+	font-size: 1.6em;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+	text-wrap: balance;
+}
+
+.reveal strong {
+	color: var(--deck-ink);
+}
+
+.reveal a {
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+}
+
+.reveal ul {
+	line-height: 1.5;
+}
+
+/* ---- Slide layout helpers ---- */
+
+.reveal .slides section {
+	text-align: left;
+}
+
+.reveal .slides section:not(.deck-dark) h1::after,
+.reveal .slides section:not(.deck-dark) h2::after {
+	content: "";
+	display: block;
+	width: 2.2em;
+	height: 4px;
+	margin: 0.35em 0 0;
+	border-radius: 999px;
+	background: var(--deck-accent);
+}
+
+.deck-subtitle {
+	display: block;
+	margin-top: 0.4em;
+	color: var(--deck-ink-soft);
+	font-size: 0.75em;
+	letter-spacing: 0.01em;
+}
+
+.deck-author {
+	margin-top: 1.6em;
+	color: var(--deck-ink);
+	font-size: 0.55em;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.deck-note {
+	margin-top: 1.4em;
+	font-size: 0.5em;
+	font-style: italic;
+	color: var(--deck-ink-soft);
+}
+
+/* ---- Dark sections (title / closing) ---- */
+
+.reveal .slides section.deck-dark {
+	color: #e2e8f0;
+}
+
+.reveal .slides section.deck-dark h1,
+.reveal .slides section.deck-dark h2,
+.reveal .slides section.deck-dark h3,
+.reveal .slides section.deck-dark strong {
+	color: #f8fafc;
+}
+
+.reveal .slides section.deck-dark .deck-subtitle,
+.reveal .slides section.deck-dark .deck-note {
+	color: var(--deck-canvas-dark-soft);
+}
+
+.reveal .slides section.deck-dark h1::after,
+.reveal .slides section.deck-dark h2::after {
+	background: var(--deck-accent-soft);
+}
+
+.reveal .slides section.deck-dark a {
+	color: #93c5fd;
+}
+
+/* ---- Chrome (progress bar & slide number) ---- */
+
+.reveal .progress {
+	color: var(--deck-accent);
+	height: 3px;
+}
+
+.reveal .slide-number {
+	background: transparent;
+	color: #ffffff;
+	mix-blend-mode: difference;
+	font-family: var(--deck-font-mono);
+	font-size: 18px;
+}

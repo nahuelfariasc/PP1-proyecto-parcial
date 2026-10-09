@@ -1,0 +1,14 @@
+# OS / editor
+.DS_Store
+*.swp
+
+# Node (only if reveal.js dependencies are ever installed)
+node_modules/
+
+# Future Python remote controller
+__pycache__/
+*.py[cod]
+.venv/
+
+# Generated Gentle AI skill registry
+.atl/
