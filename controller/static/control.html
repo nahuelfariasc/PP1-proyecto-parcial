@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+		/>
+		<meta name="theme-color" content="#0f172a" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<title>Control de la presentación</title>
+		<link rel="stylesheet" href="/static/control.css" />
+	</head>
+	<body>
+		<main class="panel">
+			<header class="panel__head">
+				<p class="panel__eyebrow">PP1 · Control remoto</p>
+				<h1 class="panel__title">Aproximación al campo laboral</h1>
+				<p class="panel__status" id="status" data-state="connecting">
+					Conectando…
+				</p>
+			</header>
+
+			<p class="panel__counter" aria-live="polite">
+				<span class="panel__count" id="current">–</span>
+				<span class="panel__sep">/</span>
+				<span class="panel__count panel__count--muted" id="total">–</span>
+			</p>
+
+			<div class="pad">
+				<button class="btn btn--step" id="prev" type="button">
+					<span class="btn__arrow" aria-hidden="true">‹</span>
+					<span class="btn__label">Anterior</span>
+				</button>
+				<button class="btn btn--step" id="next" type="button">
+					<span class="btn__arrow" aria-hidden="true">›</span>
+					<span class="btn__label">Siguiente</span>
+				</button>
+			</div>
+
+			<div class="pad pad--minor">
+				<button class="btn btn--ghost" id="home" type="button">Inicio</button>
+				<button class="btn btn--ghost" id="end" type="button">Fin</button>
+			</div>
+		</main>
+
+		<script src="/static/control.js"></script>
+	</body>
+</html>

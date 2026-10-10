@@ -1,0 +1,166 @@
+:root {
+	--bg: #0f172a;
+	--surface: #1e293b;
+	--surface-soft: #334155;
+	--ink: #f8fafc;
+	--ink-soft: #94a3b8;
+	--accent: #3b82f6;
+	--ok: #22c55e;
+	--off: #f59e0b;
+	--font: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	min-height: 100%;
+}
+
+body {
+	padding: 1.4rem 1.2rem calc(1.4rem + env(safe-area-inset-bottom));
+	background: var(--bg);
+	color: var(--ink);
+	font-family: var(--font);
+	-webkit-tap-highlight-color: transparent;
+}
+
+.panel {
+	display: flex;
+	flex-direction: column;
+	gap: 1.4rem;
+	max-width: 34rem;
+	min-height: calc(100vh - 2.8rem);
+	margin: 0 auto;
+}
+
+.panel__head {
+	text-align: center;
+}
+
+.panel__eyebrow {
+	margin: 0;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--ink-soft);
+}
+
+.panel__title {
+	margin: 0.4rem 0 0;
+	font-size: 1.35rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.panel__status {
+	margin: 0.6rem 0 0;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--ink-soft);
+}
+
+.panel__status[data-state="online"] {
+	color: var(--ok);
+}
+
+.panel__status[data-state="offline"] {
+	color: var(--off);
+}
+
+.panel__counter {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	gap: 0.4rem;
+	margin: 0;
+	font-variant-numeric: tabular-nums;
+}
+
+.panel__count {
+	font-size: 3rem;
+	font-weight: 800;
+	line-height: 1;
+}
+
+.panel__count--muted {
+	font-size: 1.6rem;
+	color: var(--ink-soft);
+}
+
+.panel__sep {
+	font-size: 1.6rem;
+	color: var(--ink-soft);
+}
+
+.pad {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.9rem;
+	margin-top: auto;
+}
+
+.pad--minor {
+	margin-top: 0;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	min-height: 5.5rem;
+	padding: 0.9rem 1rem;
+	border: 1px solid var(--surface-soft);
+	border-radius: 1rem;
+	background: var(--surface);
+	color: var(--ink);
+	font-family: inherit;
+	font-size: 1.05rem;
+	font-weight: 600;
+	cursor: pointer;
+	touch-action: manipulation;
+	transition:
+		transform 0.06s ease,
+		background 0.15s ease;
+}
+
+.btn:active {
+	transform: scale(0.97);
+	background: var(--surface-soft);
+}
+
+.btn__arrow {
+	font-size: 1.8rem;
+	line-height: 1;
+}
+
+.btn--step {
+	background: var(--accent);
+	border-color: var(--accent);
+}
+
+.btn--step:active {
+	background: #2563eb;
+}
+
+.btn--ghost {
+	min-height: 3.4rem;
+	font-size: 0.95rem;
+	color: var(--ink-soft);
+}
+
+.btn:focus-visible {
+	outline: 3px solid #93c5fd;
+	outline-offset: 2px;
+}
+
+@media (min-width: 480px) {
+	.panel__title {
+		font-size: 1.6rem;
+	}
+}
