@@ -131,6 +131,319 @@
 	color: #93c5fd;
 }
 
+/* ---- Content components (pills, cards, flows) ---- */
+
+.deck-lead {
+	margin-top: 0.5em;
+	max-width: 46ch;
+	font-size: 0.6em;
+	line-height: 1.5;
+	color: var(--deck-ink-soft);
+}
+
+.deck-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin: 0.7em 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.deck-pill {
+	display: inline-block;
+	padding: 0.3em 0.75em;
+	border-radius: 999px;
+	background: var(--deck-accent-soft);
+	color: var(--deck-ink);
+	font-size: 0.48em;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+}
+
+.deck-cards {
+	display: grid;
+	gap: 0.6em;
+	margin-top: 0.6em;
+}
+
+.deck-cards--3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.deck-card {
+	padding: 0.7em 0.8em;
+	border: 1px solid #e2e8f0;
+	border-radius: 14px;
+	background: #f8fafc;
+}
+
+.deck-card h3 {
+	margin: 0 0 0.25em;
+	font-size: 0.6em;
+	color: var(--deck-ink);
+}
+
+.deck-card p {
+	margin: 0;
+	font-size: 0.46em;
+	line-height: 1.45;
+	color: var(--deck-ink-soft);
+}
+
+.deck-rolecard {
+	display: flex;
+	flex-direction: column;
+	gap: 0.15em;
+	margin: 0.5em 0 0;
+	padding: 0.6em 0.85em;
+	border-left: 4px solid var(--deck-accent);
+	border-radius: 0 12px 12px 0;
+	background: #f8fafc;
+}
+
+.deck-rolecard-title {
+	font-size: 0.6em;
+	font-weight: 700;
+	color: var(--deck-ink);
+}
+
+.deck-rolecard-sub {
+	font-size: 0.48em;
+	color: var(--deck-ink-soft);
+}
+
+.deck-two-col {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.9em;
+	margin-top: 0.5em;
+}
+
+.deck-col h3 {
+	margin: 0 0 0.3em;
+	font-size: 0.56em;
+}
+
+.deck-col ul {
+	margin: 0;
+	padding-left: 1.1em;
+}
+
+.deck-col li {
+	margin-bottom: 0.25em;
+	font-size: 0.46em;
+	line-height: 1.4;
+	color: var(--deck-ink-soft);
+}
+
+.deck-col--good h3 {
+	color: #15803d;
+}
+
+.deck-col--bad h3 {
+	color: #b91c1c;
+}
+
+.deck-week {
+	margin-top: 0.7em;
+}
+
+.deck-week-meeting {
+	display: flex;
+	align-items: center;
+	gap: 0.7em;
+	padding: 0.7em 0.95em;
+	border-radius: 14px;
+	background: var(--deck-accent-soft);
+}
+
+.deck-week-count {
+	font-size: 1.2em;
+	font-weight: 800;
+	line-height: 1;
+	color: var(--deck-accent);
+}
+
+.deck-week-text {
+	font-size: 0.54em;
+	color: var(--deck-ink);
+}
+
+.deck-flow {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5em;
+	margin-top: 0.7em;
+}
+
+.deck-flow-step {
+	padding: 0.45em 0.75em;
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	background: #f8fafc;
+	font-size: 0.5em;
+	font-weight: 600;
+	color: var(--deck-ink);
+}
+
+.deck-flow-arrow {
+	font-size: 0.7em;
+	color: var(--deck-accent);
+}
+
+.deck-label {
+	margin: 0.8em 0 0.2em;
+	font-size: 0.4em;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--deck-ink-soft);
+}
+
+/* ---- Diagrams (inline SVG) ---- */
+
+.deck-figure {
+	margin: 0.4em 0 0;
+}
+
+.deck-diagram {
+	display: block;
+	width: 100%;
+	max-width: 780px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.deck-diagram--loop {
+	max-width: 430px;
+}
+
+.deck-figure svg text {
+	font-family: var(--deck-font-sans);
+}
+
+.deck-figcap {
+	margin: 0.5em 0 0;
+	font-size: 0.44em;
+	line-height: 1.45;
+	color: var(--deck-ink-soft);
+}
+
+/* Organigrama */
+.dia-edge {
+	stroke: #94a3b8;
+	stroke-width: 2.5;
+}
+
+.dia-edge-collab {
+	stroke: #cbd5e1;
+	stroke-width: 2;
+	stroke-dasharray: 7 7;
+}
+
+.dia-edge-client {
+	stroke: var(--deck-accent);
+	stroke-width: 2.5;
+	stroke-dasharray: 9 7;
+}
+
+.dia-node {
+	fill: #ffffff;
+	stroke: #94a3b8;
+	stroke-width: 2.5;
+}
+
+.dia-node-client {
+	fill: #eef2ff;
+	stroke: var(--deck-accent);
+	stroke-width: 2.5;
+}
+
+.dia-hub {
+	fill: var(--deck-accent);
+}
+
+.dia-hub-label {
+	fill: #ffffff;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.dia-label {
+	fill: var(--deck-ink);
+	font-size: 21px;
+	font-weight: 600;
+}
+
+/* Círculo de la promesa */
+.dia-loop-edge {
+	fill: none;
+	stroke: #94a3b8;
+	stroke-width: 2.5;
+}
+
+.dia-loop-edge-return {
+	fill: none;
+	stroke: var(--deck-accent);
+	stroke-width: 3;
+}
+
+.dia-loop-node {
+	fill: #ffffff;
+	stroke: #94a3b8;
+	stroke-width: 2.5;
+}
+
+.dia-loop-num {
+	fill: var(--deck-accent);
+	font-size: 25px;
+	font-weight: 800;
+}
+
+.dia-loop-label {
+	fill: var(--deck-ink);
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.dia-loop-center {
+	fill: #94a3b8;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+/* ---- Closing reflection (dark slide) ---- */
+
+.deck-reflection {
+	display: grid;
+	gap: 0.55em;
+	margin-top: 0.6em;
+}
+
+.deck-reflection-item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.1em;
+	padding: 0.55em 0.85em;
+	border-left: 4px solid var(--deck-accent);
+	border-radius: 0 12px 12px 0;
+	background: rgba(148, 163, 184, 0.12);
+}
+
+.deck-reflection-key {
+	font-size: 0.5em;
+	font-weight: 700;
+	color: #f8fafc;
+}
+
+.deck-reflection-text {
+	font-size: 0.44em;
+	line-height: 1.45;
+	color: #cbd5e1;
+}
+
 /* ---- Chrome (progress bar & slide number) ---- */
 
 .reveal .progress {
@@ -144,4 +457,30 @@
 	mix-blend-mode: difference;
 	font-family: var(--deck-font-mono);
 	font-size: 18px;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 900px) {
+	.deck-cards--3 {
+		grid-template-columns: 1fr;
+	}
+
+	.deck-two-col {
+		grid-template-columns: 1fr;
+	}
+
+	.deck-diagram {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 600px) {
+	.deck-diagram--loop {
+		max-width: 320px;
+	}
+
+	.deck-flow-arrow {
+		display: none;
+	}
 }

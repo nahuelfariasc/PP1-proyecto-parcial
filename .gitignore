@@ -12,3 +12,6 @@ __pycache__/
 
 # Generated Gentle AI skill registry
 .atl/
+
+# Local reference documents (not versioned)
+/reference/
